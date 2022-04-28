@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap");
+/*import any font u like from google fonts*/
+:root {
+  --primary-color: #3a3a3a; /*you can change primary color to what ever u want (this is the text color that appears)*/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Akshar", akshar;
+  line-height: 1.5;
+}
+a {
+  /*styling for links*/
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+h1 {
+  /*change up h1, h2, h3, etc to ur liking and add as many texts as you want based on these premises or add more specificity if needed*/
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.showcase {
+  /*this is the position of the all the text and you can mess around with this to where ever u want the text to be*/
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.video-container {
+  /*this is the positioning of the video, I suggest not to mess around with this. Other than changing up color and the jpg image itself and their links, this is the general positioning for the landing page*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--primary-color) url("./cover.jpg") no-repeat center
+    center/cover;
+}
+.video-container video {
+  /*i dont suggest messing around with this, this resizes the landing page when make the window smaller*/
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /*mess around with the decimal to fade in/darken background color (works with background transparency)*/
+}
+.content {
+  z-index: 10; /*dont need to really mess around with this*/
+}
+
+/*you can either code this in css or just incorporate JS and mess around with the functions for the button and other properties for the button*/
+.btn {
+  /*mess around with all these numbers if u want*/
+  display: inline-block;
+  padding: 10x 30x;
+  background: var(--primary-color--);
+  color: #fff;
+  border: 1px #fff solid;
+  opacity: 0.7;
+}
+
+.btn:hover {
+  /*scales down the button slightly when you hover the mouse over the button*/
+  transform: scale(0.98);
+}
+/*the following ones below are meant to customize the about 
+#about section which u can completely opt out of*/
+ {
+  padding: 40px;
+  text-align: center;
+}
+#about {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+}
+#about h2 {
+  margin: 30px 0;
+  color: var (--primary-color--);
+}
+
+.social a {
+  /*based on preferences but this adjusts the size of the social media logos with links*/
+  margin: 0 5px;
+}
